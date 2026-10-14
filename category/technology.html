@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Technology · Top Beans</title><meta name="description" content="Top Beans Technology picks."><meta property="og:title" content="Technology · Top Beans"><meta property="og:description" content="Top Beans Technology picks."><meta property="og:type" content="website"><link rel="stylesheet" href="/assets/style.css">
+<script>
+window.TB_CONFIG = { ga4: null, pixel: null };
+(function(){
+  var consent = localStorage.getItem('tb_consent');
+  var dnt = (navigator.doNotTrack === '1' || window.doNotTrack === '1' || navigator.globalPrivacyControl === true);
+  function loadTrackers(){
+    if (window.TB_CONFIG.ga4) {
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.TB_CONFIG.ga4;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ dataLayer.push(arguments); };
+      gtag('js', new Date()); gtag('config', window.TB_CONFIG.ga4, { anonymize_ip: true });
+    }
+    if (window.TB_CONFIG.pixel) {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+      (window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', window.TB_CONFIG.pixel); fbq('track', 'PageView');
+    }
+  }
+  window.tbConsent = function(choice){
+    localStorage.setItem('tb_consent', choice);
+    var b = document.getElementById('tb-consent'); if (b) b.remove();
+    if (choice === 'accepted') loadTrackers();
+  };
+  if (consent === 'accepted' && !dnt) loadTrackers();
+  if (!consent && !dnt) {
+    document.addEventListener('DOMContentLoaded', function(){
+      var bar = document.createElement('div'); bar.id = 'tb-consent'; bar.className = 'consent';
+      bar.innerHTML = '<p>This site can use cookies for basic analytics (Google Analytics, Meta Pixel) only if you accept. Our own click log stays in your browser either way. See the <a href="/privacy.html">privacy page</a>.</p>' +
+        '<button onclick="tbConsent(\'accepted\')">Accept</button> <button onclick="tbConsent(\'declined\')">Decline</button>';
+      document.body.appendChild(bar);
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    var el = document.querySelector('[data-product-id]');
+    if (el && window.fbq) fbq('track', 'ViewContent', { content_ids: [el.getAttribute('data-product-id')], content_type: 'product' });
+    if (el && window.gtag) gtag('event', 'view_item', { item_id: el.getAttribute('data-product-id')] });
+  });
+})();
+</script>
+</head><body><header class="site-header"><div class="wrap"><a class="brand" href="/index.html">TOP BEANS<small>Good Stuff. Worth Knowing.</small></a><nav class="main-nav" aria-label="Main"><a href="/index.html">Discoveries</a><a href="/solutions.html">Solutions</a><a href="/about.html">About</a></nav></div></header><main class="wrap"><h1>Technology</h1><ul class="cards"><li><article class="product-card"><div class="product-visual"><svg viewBox="0 0 320 180" role="img" aria-label="Anker 735 charger: one small charger, three devices"><rect width="320" height="180" rx="12" fill="#fef3e2"/><rect x="120" y="46" width="80" height="100" rx="14" fill="#fff" stroke="#b45309" stroke-width="3"/><rect x="112" y="30" width="16" height="22" rx="4" fill="#b45309"/><rect x="192" y="30" width="16" height="22" rx="4" fill="#b45309"/><rect x="134" y="66" width="18" height="30" rx="4" fill="#e7e5e4"/><rect x="158" y="66" width="18" height="30" rx="4" fill="#e7e5e4"/><rect x="134" y="104" width="52" height="12" rx="6" fill="#e7e5e4"/><circle cx="70" cy="120" r="16" fill="#fdba74"/><circle cx="250" cy="120" r="16" fill="#fdba74"/><text x="24" y="172" font-family="system-ui" font-size="13" fill="#78716c">65W for your laptop and two more devices</text></svg></div><h3><a href="/product/tb-prod-0002.html">Anker 735 Charger (GaNPrime 65W)</a></h3><p class="benefit">One small charger for your laptop and two more devices.</p><p class="cta-row"><a class="cta" data-track-click data-product-id="tb-prod-0002" data-offer-id="placeholder" data-merchant="Anker" href="https://www.anker.com" rel="noopener" target="_blank">See it at Anker</a></p><p class="note">Not an affiliate link yet. This becomes an affiliate link only when a real, approved program relationship exists for this product.</p></article></li></ul></main><footer class="site-footer"><div class="wrap"><p>Affiliate disclosure: Top Beans refers customers to external merchants and does not sell or fulfill products. Top Beans may earn a commission when you buy through links on this site, at no extra cost to you. Links are only marked as affiliate links when a real, approved affiliate relationship exists for that product.</p><nav><a href="/privacy.html">Privacy</a><a href="/disclosure.html">Disclosure</a><a href="/about.html">About &amp; Contact</a></nav><p>© 2026 Top Beans. Contact: elle.loveana@gmail.com</p></div></footer><script src="/assets/track.js"></script></body></html>

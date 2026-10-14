@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Skillshare · Top Beans</title><meta name="description" content="Learn anything creative, starting with a free trial."><meta property="og:title" content="Skillshare · Top Beans"><meta property="og:description" content="Learn anything creative, starting with a free trial."><meta property="og:type" content="website"><link rel="stylesheet" href="/assets/style.css">
+<script>
+window.TB_CONFIG = { ga4: null, pixel: null };
+(function(){
+  var consent = localStorage.getItem('tb_consent');
+  var dnt = (navigator.doNotTrack === '1' || window.doNotTrack === '1' || navigator.globalPrivacyControl === true);
+  function loadTrackers(){
+    if (window.TB_CONFIG.ga4) {
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.TB_CONFIG.ga4;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ dataLayer.push(arguments); };
+      gtag('js', new Date()); gtag('config', window.TB_CONFIG.ga4, { anonymize_ip: true });
+    }
+    if (window.TB_CONFIG.pixel) {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+      (window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', window.TB_CONFIG.pixel); fbq('track', 'PageView');
+    }
+  }
+  window.tbConsent = function(choice){
+    localStorage.setItem('tb_consent', choice);
+    var b = document.getElementById('tb-consent'); if (b) b.remove();
+    if (choice === 'accepted') loadTrackers();
+  };
+  if (consent === 'accepted' && !dnt) loadTrackers();
+  if (!consent && !dnt) {
+    document.addEventListener('DOMContentLoaded', function(){
+      var bar = document.createElement('div'); bar.id = 'tb-consent'; bar.className = 'consent';
+      bar.innerHTML = '<p>This site can use cookies for basic analytics (Google Analytics, Meta Pixel) only if you accept. Our own click log stays in your browser either way. See the <a href="/privacy.html">privacy page</a>.</p>' +
+        '<button onclick="tbConsent(\'accepted\')">Accept</button> <button onclick="tbConsent(\'declined\')">Decline</button>';
+      document.body.appendChild(bar);
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    var el = document.querySelector('[data-product-id]');
+    if (el && window.fbq) fbq('track', 'ViewContent', { content_ids: [el.getAttribute('data-product-id')], content_type: 'product' });
+    if (el && window.gtag) gtag('event', 'view_item', { item_id: el.getAttribute('data-product-id')] });
+  });
+})();
+</script>
+</head><body data-product-id="tb-prod-0006"><header class="site-header"><div class="wrap"><a class="brand" href="/index.html">TOP BEANS<small>Good Stuff. Worth Knowing.</small></a><nav class="main-nav" aria-label="Main"><a href="/index.html">Discoveries</a><a href="/solutions.html">Solutions</a><a href="/about.html">About</a></nav></div></header><main class="wrap product-page"><div class="product-hero-visual"><svg viewBox="0 0 320 180" role="img" aria-label="Skillshare: learn anything creative"><rect width="320" height="180" rx="12" fill="#fef3e2"/><rect x="60" y="40" width="200" height="110" rx="8" fill="#fff" stroke="#b45309" stroke-width="3"/><rect x="60" y="40" width="200" height="26" rx="8" fill="#b45309"/><rect x="76" y="80" width="120" height="10" rx="5" fill="#e7e5e4"/><rect x="76" y="96" width="168" height="10" rx="5" fill="#e7e5e4"/><rect x="76" y="112" width="90" height="10" rx="5" fill="#fdba74"/><circle cx="262" cy="52" r="20" fill="#fdba74"/><text x="24" y="172" font-family="system-ui" font-size="13" fill="#78716c">25,000+ classes, free trial to start</text></svg></div><h1>Skillshare</h1><p class="benefit">Learn anything creative, starting with a free trial.</p><p class="cta-row"><a class="cta" data-track-click data-product-id="tb-prod-0006" data-offer-id="placeholder" data-merchant="Skillshare, Inc." href="https://www.skillshare.com" rel="noopener" target="_blank">See it at Skillshare, Inc.</a></p><p class="note">Not an affiliate link yet. This becomes an affiliate link only when a real, approved program relationship exists for this product.</p><h2>How it works</h2><ol><li>Join as a new member and start with a free trial.</li><li>The trial unlocks the full class catalog.</li><li>Watch classes in illustration, design, photography, and more, and follow along with student projects.</li></ol><h2>Why it is useful</h2><p>One membership covers 25,000+ classes and 60,000+ student projects (vendor figures) instead of buying courses one by one, and the free trial lets you test it with unlimited catalog access.</p><h2>Limitations and important details</h2><p>The free trial is for new members; continued access requires a paid membership. Class quality varies across the community catalog.</p><div class="disclosure-box"><strong>Affiliate disclosure</strong><br>Affiliate disclosure: Top Beans refers customers to external merchants and does not sell or fulfill products. Top Beans may earn a commission when you buy through links on this site, at no extra cost to you. Links are only marked as affiliate links when a real, approved affiliate relationship exists for that product.</div><details class="evidence"><summary>Supporting evidence</summary><p>These are the facts Top Beans verified on the merchant page. We publish only what we verified.</p><ul><li>Online learning community with classes in illustration, design, photography, and more</li><li>25,000+ online classes and 60,000+ student projects (vendor affiliates page)</li><li>New members can start with a free trial with unlimited access to the full catalog</li></ul></details></main><footer class="site-footer"><div class="wrap"><p>Affiliate disclosure: Top Beans refers customers to external merchants and does not sell or fulfill products. Top Beans may earn a commission when you buy through links on this site, at no extra cost to you. Links are only marked as affiliate links when a real, approved affiliate relationship exists for that product.</p><nav><a href="/privacy.html">Privacy</a><a href="/disclosure.html">Disclosure</a><a href="/about.html">About &amp; Contact</a></nav><p>© 2026 Top Beans. Contact: elle.loveana@gmail.com</p></div></footer><script src="/assets/track.js"></script></body></html>

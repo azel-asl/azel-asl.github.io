@@ -1,0 +1,51 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>About &amp; Contact · Top Beans</title><meta name="description" content="About Top Beans and how to reach us."><meta property="og:title" content="About &amp; Contact · Top Beans"><meta property="og:description" content="About Top Beans and how to reach us."><meta property="og:type" content="website"><link rel="stylesheet" href="/assets/style.css">
+<script>
+window.TB_CONFIG = { ga4: null, pixel: null };
+(function(){
+  var consent = localStorage.getItem('tb_consent');
+  var dnt = (navigator.doNotTrack === '1' || window.doNotTrack === '1' || navigator.globalPrivacyControl === true);
+  function loadTrackers(){
+    if (window.TB_CONFIG.ga4) {
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.TB_CONFIG.ga4;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ dataLayer.push(arguments); };
+      gtag('js', new Date()); gtag('config', window.TB_CONFIG.ga4, { anonymize_ip: true });
+    }
+    if (window.TB_CONFIG.pixel) {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+      (window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', window.TB_CONFIG.pixel); fbq('track', 'PageView');
+    }
+  }
+  window.tbConsent = function(choice){
+    localStorage.setItem('tb_consent', choice);
+    var b = document.getElementById('tb-consent'); if (b) b.remove();
+    if (choice === 'accepted') loadTrackers();
+  };
+  if (consent === 'accepted' && !dnt) loadTrackers();
+  if (!consent && !dnt) {
+    document.addEventListener('DOMContentLoaded', function(){
+      var bar = document.createElement('div'); bar.id = 'tb-consent'; bar.className = 'consent';
+      bar.innerHTML = '<p>This site can use cookies for basic analytics (Google Analytics, Meta Pixel) only if you accept. Our own click log stays in your browser either way. See the <a href="/privacy.html">privacy page</a>.</p>' +
+        '<button onclick="tbConsent(\'accepted\')">Accept</button> <button onclick="tbConsent(\'declined\')">Decline</button>';
+      document.body.appendChild(bar);
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    var el = document.querySelector('[data-product-id]');
+    if (el && window.fbq) fbq('track', 'ViewContent', { content_ids: [el.getAttribute('data-product-id')], content_type: 'product' });
+    if (el && window.gtag) gtag('event', 'view_item', { item_id: el.getAttribute('data-product-id')] });
+  });
+})();
+</script>
+</head><body><header class="site-header"><div class="wrap"><a class="brand" href="/index.html">TOP BEANS<small>Good Stuff. Worth Knowing.</small></a><nav class="main-nav" aria-label="Main"><a href="/index.html">Discoveries</a><a href="/solutions.html">Solutions</a><a href="/about.html">About</a></nav></div></header><main class="wrap"><h1>About Top Beans</h1>
+        <p>Top Beans is a small discovery project with one rule: good stuff, worth knowing. Every product page lists only facts checked on the merchant's own page.</p>
+        <h2>Contact</h2><p>Email: elle.loveana@gmail.com</p>
+        <h2>How products get added</h2>
+        <p>Products are discovered, verified against merchant and program pages, and published only after owner approval. There is no checkout on this site; every buy button takes you to the external merchant.</p>
+        <p class="note">Affiliate disclosure: Top Beans refers customers to external merchants and does not sell or fulfill products. Top Beans may earn a commission when you buy through links on this site, at no extra cost to you. Links are only marked as affiliate links when a real, approved affiliate relationship exists for that product.</p></main><footer class="site-footer"><div class="wrap"><p>Affiliate disclosure: Top Beans refers customers to external merchants and does not sell or fulfill products. Top Beans may earn a commission when you buy through links on this site, at no extra cost to you. Links are only marked as affiliate links when a real, approved affiliate relationship exists for that product.</p><nav><a href="/privacy.html">Privacy</a><a href="/disclosure.html">Disclosure</a><a href="/about.html">About &amp; Contact</a></nav><p>© 2026 Top Beans. Contact: elle.loveana@gmail.com</p></div></footer><script src="/assets/track.js"></script></body></html>

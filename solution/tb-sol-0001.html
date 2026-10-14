@@ -1,0 +1,46 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>The One-Person Faceless Video Studio · Top Beans Solution</title><meta name="description" content="Top Beans Solution: Make professional videos without appearing on camera."><meta property="og:title" content="The One-Person Faceless Video Studio · Top Beans Solution"><meta property="og:description" content="Top Beans Solution: Make professional videos without appearing on camera."><meta property="og:type" content="website"><link rel="stylesheet" href="/assets/style.css">
+<script>
+window.TB_CONFIG = { ga4: null, pixel: null };
+(function(){
+  var consent = localStorage.getItem('tb_consent');
+  var dnt = (navigator.doNotTrack === '1' || window.doNotTrack === '1' || navigator.globalPrivacyControl === true);
+  function loadTrackers(){
+    if (window.TB_CONFIG.ga4) {
+      var s = document.createElement('script'); s.async = true;
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=' + window.TB_CONFIG.ga4;
+      document.head.appendChild(s);
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function(){ dataLayer.push(arguments); };
+      gtag('js', new Date()); gtag('config', window.TB_CONFIG.ga4, { anonymize_ip: true });
+    }
+    if (window.TB_CONFIG.pixel) {
+      !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+      n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
+      (window, document, 'script', 'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', window.TB_CONFIG.pixel); fbq('track', 'PageView');
+    }
+  }
+  window.tbConsent = function(choice){
+    localStorage.setItem('tb_consent', choice);
+    var b = document.getElementById('tb-consent'); if (b) b.remove();
+    if (choice === 'accepted') loadTrackers();
+  };
+  if (consent === 'accepted' && !dnt) loadTrackers();
+  if (!consent && !dnt) {
+    document.addEventListener('DOMContentLoaded', function(){
+      var bar = document.createElement('div'); bar.id = 'tb-consent'; bar.className = 'consent';
+      bar.innerHTML = '<p>This site can use cookies for basic analytics (Google Analytics, Meta Pixel) only if you accept. Our own click log stays in your browser either way. See the <a href="/privacy.html">privacy page</a>.</p>' +
+        '<button onclick="tbConsent(\'accepted\')">Accept</button> <button onclick="tbConsent(\'declined\')">Decline</button>';
+      document.body.appendChild(bar);
+    });
+  }
+  document.addEventListener('DOMContentLoaded', function(){
+    var el = document.querySelector('[data-product-id]');
+    if (el && window.fbq) fbq('track', 'ViewContent', { content_ids: [el.getAttribute('data-product-id')], content_type: 'product' });
+    if (el && window.gtag) gtag('event', 'view_item', { item_id: el.getAttribute('data-product-id')] });
+  });
+})();
+</script>
+</head><body data-solution-id="tb-sol-0001"><header class="site-header"><div class="wrap"><a class="brand" href="/index.html">TOP BEANS<small>Good Stuff. Worth Knowing.</small></a><nav class="main-nav" aria-label="Main"><a href="/index.html">Discoveries</a><a href="/solutions.html">Solutions</a><a href="/about.html">About</a></nav></div></header><main class="wrap product-page"><div class="product-hero-visual"><svg viewBox="0 0 320 180" role="img" aria-label="The One-Person Faceless Video Studio"><rect width="320" height="180" rx="12" fill="#fef3e2"/><rect x="30" y="55" width="70" height="70" rx="10" fill="#fff" stroke="#b45309" stroke-width="3"/><rect x="125" y="55" width="70" height="70" rx="10" fill="#fff" stroke="#b45309" stroke-width="3"/><rect x="220" y="55" width="70" height="70" rx="10" fill="#fff" stroke="#b45309" stroke-width="3"/><text x="42" y="97" font-family="system-ui" font-size="15" font-weight="700" fill="#b45309">plan</text><text x="133" y="97" font-family="system-ui" font-size="15" font-weight="700" fill="#b45309">produce</text><text x="234" y="97" font-family="system-ui" font-size="15" font-weight="700" fill="#b45309">learn</text><text x="24" y="162" font-family="system-ui" font-size="13" fill="#78716c">videos without appearing on camera</text></svg></div><h1>The One-Person Faceless Video Studio</h1><p class="benefit">Make professional videos without appearing on camera.</p><h2>The setup</h2><ul><li><strong>Notion</strong> <span class="note">(REQUIRED)</span><br>Plan the content pipeline: video calendar, episode briefs, script drafts</li><li><strong>Descript</strong> <span class="note">(REQUIRED)</span><br>Produce: record, transcribe, and edit video by editing text; captions<br><a href="/product/tb-prod-0003.html">See Descript &rarr;</a></li><li><strong>Grammarly</strong> <span class="note">(SUPPORTING (optional))</span><br>Polish scripts and on-screen copy before recording</li><li><strong>Skillshare</strong> <span class="note">(LEARNING RESOURCE (optional))</span><br>Learn video craft; not a pipeline dependency<br><a href="/product/tb-prod-0006.html">See Skillshare &rarr;</a></li></ul><h2>How they work together</h2><ol><li>Plan the video in Notion: brief, outline, script draft.</li><li>Polish the script with Grammarly.</li><li>Paste the plain-text script into Descript, generate the voice or record your own, edit by editing text, export with captions.</li><li>Use Skillshare only if you want to learn a skill the stack does not teach you.</li></ol><h2>Limitations and important details</h2><p>Visual footage and thumbnails are not covered by these products. The end-to-end workflow has not been hands-on verified by Top Beans.</p><div class="disclosure-box"><strong>Affiliate disclosure</strong><br>Affiliate disclosure: Top Beans refers customers to external merchants and does not sell or fulfill products. Top Beans may earn a commission when you buy through links on this site, at no extra cost to you. Links are only marked as affiliate links when a real, approved affiliate relationship exists for that product.</div></main><footer class="site-footer"><div class="wrap"><p>Affiliate disclosure: Top Beans refers customers to external merchants and does not sell or fulfill products. Top Beans may earn a commission when you buy through links on this site, at no extra cost to you. Links are only marked as affiliate links when a real, approved affiliate relationship exists for that product.</p><nav><a href="/privacy.html">Privacy</a><a href="/disclosure.html">Disclosure</a><a href="/about.html">About &amp; Contact</a></nav><p>© 2026 Top Beans. Contact: elle.loveana@gmail.com</p></div></footer><script src="/assets/track.js"></script></body></html>
