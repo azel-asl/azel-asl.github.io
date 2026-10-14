@@ -39,7 +39,7 @@ window.TB_CONFIG = { ga4: null, pixel: null };
   document.addEventListener('DOMContentLoaded', function(){
     var el = document.querySelector('[data-product-id]');
     if (el && window.fbq) fbq('track', 'ViewContent', { content_ids: [el.getAttribute('data-product-id')], content_type: 'product' });
-    if (el && window.gtag) gtag('event', 'view_item', { item_id: el.getAttribute('data-product-id')] });
+    if (el && window.gtag) gtag('event', 'view_item', { item_id: el.getAttribute('data-product-id') });
   });
 })();
 </script>
